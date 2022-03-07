@@ -1,0 +1,1380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1f294a;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+
+
+@font-face {
+  font-family: "Inter-Light";
+  src: url("../fonts/Inter/Inter-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/Inter/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../fonts/Inter/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("../fonts/Inter/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../fonts/Inter/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(28, 55, 84, 0.5);
+  backdrop-filter: blur(50px);
+  position: absolute;
+  z-index: 19;
+  display: none;
+  transition: 0.8s;
+}
+
+.holder {
+  width:1349px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 28.83px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .holder {
+   width: 100%; 
+  }
+}
+
+.holder .burger-menu {
+  padding: 20px 13px 0 13px;
+  width: 100%;
+  height: 467px;
+  position: fixed;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(17, 49, 80, 0.91) 0%, rgba(10, 33, 55, 0.91) 100%);
+  z-index: 20;
+  transform: translate3d(-5000px, 0, 0);
+  transition: 1.5s;
+  top: 0;
+}
+
+.holder .burger-menu .header {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  justify-content: space-between;
+}
+
+.holder .burger-menu .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+img.mobile-logo {
+    max-width: 130px;
+}
+.holder .burger-menu .main a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 342px;
+  height: 71px;
+  background: #24315b;
+  border-radius: 7px;
+  border: 1px solid #2E3A62;
+  font-family: "Inter-Medium";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 33px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.holder .burger-menu .main a:last-of-type {
+  margin-bottom: 0;
+}
+
+.holder .burger-menu .main .a-dif {
+  background: linear-gradient(106.81deg, rgba(193, 173, 158, 0.3) -29.16%, rgba(219, 208, 200, 0.3) 126.94%);
+  color: #193358;
+}
+
+.holder .burgerActive {
+  transform: translate3d(0, 0, 0) !important;
+  transition: 0.8s !important;
+}
+
+.holder .coming {
+  width: 353px;
+  height: 72px;
+  background: #242f54;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px 25px 110px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 865px;
+  margin-right: auto;
+  transform: translate3d(0, -100px, 0);
+  transition: 0.5s;
+  border-radius: 10px;
+ 
+}
+
+@media (max-width: 767px) {
+  .holder .coming {
+    margin-left: auto;
+    top: 70px;
+    transform: translate3d(0, -1000px, 0);
+    width: 367.73px;
+  }
+}
+
+@media (max-width: 405px) {
+  .holder .coming {
+    width: 95%;
+  }
+}
+
+.holder .coming h2 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #eef0f2;
+  margin-top: 20px;
+}
+
+.holder .coming-translate {
+  transform: translate3d(0, 0, 0);
+  background: #f219a18c;
+}
+
+.holder .header-mobile {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+}
+
+@media (max-width: 767px) {
+  .holder .header-mobile {
+    display: flex;
+  }
+}
+
+.holder .mobile-menu {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  margin-top: 80px;
+}
+
+@media (max-width: 767px) {
+  .holder .mobile-menu {
+    display: flex;
+  }
+}
+
+.holder .mobile-menu p {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.014em;
+  color: #92a0d0;
+}
+
+.holder .header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.holder .header a {
+  font-size: 16px;
+  display: block;
+  line-height: 24px;
+  color: #9aa6ac;
+  margin-top: 25px;
+  text-decoration: none;
+  font-family: "Inter-SemiBold";
+}
+
+.holder .header a:last-child{margin-left:29.19px}
+
+.holder .header .left {
+  display: flex;
+}
+.holder .header .left img{max-width:223px;}
+
+.holder .header .left .first {
+  margin-left: 26.73px;
+  margin-right: 33.84px;
+}
+
+.holder .header .left .third {
+  margin-left: 35.77px;
+  margin-right: 29.19px;
+}
+
+.holder .info {
+  display: flex;
+}
+
+@media (max-width: 405px) {
+  .holder .info {
+    width: 95%;
+  }
+}
+
+.holder .info .left-side {
+  display: flex;
+  flex-direction: column;
+  margin-right: 16px;
+  margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  .holder .info .left-side {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 405px) {
+  .holder .info .left-side {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.holder .info .left-side .coins h2{
+    font-family: "Inter-SemiBold";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    }
+
+.holder .info .left-side .coins .coin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 129px;
+  height: 34px;
+  background: #242f54;
+  border-radius: 20px;
+  padding: 0 13px 0 13px;
+  border-left: 1px solid #3c4b7c;
+}
+
+.holder .info .left-side .coins .coin p {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.014em;
+  color: #b0babf;
+}
+
+.holder .info .left-side .coins .coin p span {
+  color: white;
+}
+
+.holder .info .left-side .coins .eth {
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+.holder .info .left-side .coins .add {
+  margin-left: 9px;
+}
+
+.holder .info .left-side .two-stats {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+
+.holder .info .left-side .two-stats .swap-content h2 {
+    font-family: "Inter-SemiBold";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-feature-settings: "tnum" on, "lnum" on;
+    color: #ffffff;
+}
+
+
+.holder .info .left-side .two-stats .buy-sell {
+  width: 405px;
+  background: #242f54;
+  border-radius: 10px;
+  padding: 12px 20.87px 25px 16.42px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+  .holder .info .left-side .two-stats .buy-sell {
+    margin: 0;
+    margin-top: 80px;
+    background: transparent;
+  }
+}
+
+@media (max-width: 405px) {
+  .holder .info .left-side .two-stats .buy-sell {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.holder .info .left-side .two-stats .buy-sell .buy-gear {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  order: 1;
+}
+
+.holder .info .left-side .two-stats .buy-sell .buy-gear h2 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.014em;
+  color: #e5e9eb;
+  border-bottom: 1px solid #e5e9eb;
+  text-transform: initial;
+}
+
+@media (max-width: 767px) {
+  .holder .info .left-side .two-stats .buy-sell .buy-gear .gear {
+    display: none;
+  }
+}
+
+.holder .info .left-side .two-stats .buy-sell .buy-gear .wallet {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .holder .info .left-side .two-stats .buy-sell .buy-gear .wallet {
+    display: block;
+  }
+}
+
+.holder .info .left-side .two-stats .buy-sell .eth-stats {
+  background: #24315b;
+  border-radius: 8.79351px;
+  padding: 7.51px 14.28px 7.81px 14.28px;
+  margin-top: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  order: 2;
+}
+.holder .info .left-side .two-stats .buy-sell .eth-stats.bnb-stats{ order: 5;}
+.holder .info .left-side .two-stats .buy-sell.switch .eth-stats.bnb-stats{ order: 2;}
+.holder .info .left-side .two-stats .buy-sell.switch .eth-stats{order:5}
+.holder .info .left-side .two-stats .buy-sell .eth-stats .eth-arrow {
+  background: #1f2a50;
+  border-radius: 7.14012px;
+  width: 122.57px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5.81px 10.87px 6.69px 17.43px;
+}
+
+.holder .info .left-side .two-stats .buy-sell .eth-stats .eth-arrow h2 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 19.0403px;
+  line-height: 21px;
+  color: #e5e9eb;
+}
+
+.holder .info .left-side .two-stats .buy-sell .eth-stats .price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.holder .info .left-side .two-stats .buy-sell .eth-stats .price h2 input {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 21.1044px;
+  line-height: 28px;
+  letter-spacing: -0.019em;
+  color: #f6f8f9;
+  width: auto;
+  background: transparent;
+  border: navajowhite;
+  min-width: 40px;
+  width: 100%;
+  text-align: right;
+}
+.holder .info .left-side .two-stats .buy-sell .eth-stats .price h2 input:focus{ outline:none; }
+
+.holder .info .left-side .two-stats .buy-sell .eth-stats .price h3 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 16.6603px;
+  line-height: 21px;
+  color: #92a0d0;
+}
+
+.holder .info .left-side .two-stats .buy-sell .toke {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  order: 3;
+}
+.holder .info .left-side .two-stats .buy-sell .toke.secnd{order:6}
+.holder .info .left-side .two-stats .buy-sell .toke a {
+  text-decoration: none;
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #92a0d0;
+  margin-top: 4px;
+}
+
+.holder .info .left-side .two-stats .buy-sell .circle {
+  position: absolute;
+  width: 48.79px;
+  height: 48.79px;
+  background: #344371;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 111.33px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  order: 4;
+}
+
+
+
+.holder .info .left-side .two-stats .buy-sell .swap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: linear-gradient(89.15deg, #c306e8 3.76%, #f219a1 99.63%), #000000;
+  border-radius: 7.03481px;
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 20.0765px;
+  line-height: 29px;
+  letter-spacing: -0.014em;
+  color: #dddfe4;
+  height: 48.61px;
+  margin-top: 11px;
+  order: 7;
+}
+
+.holder .info .left-side .two-stats .buy-sell .two-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  order: 8;
+}
+
+.holder .info .left-side .two-stats .buy-sell .two-btns a {
+  width: 139px;
+  height: 32px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 29px;
+  letter-spacing: -0.014em;
+  color: #dddfe4;
+  background: linear-gradient(74.14deg, rgba(33, 114, 229, 0.6) -7.91%, rgba(18, 91, 195, 0.6) 110.57%);
+  border-radius: 7.03481px;
+  margin-top: 12.39px;
+}
+
+.holder .info .left-side .two-stats .charts {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.holder .info .left-side .two-stats .charts h2 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-feature-settings: "tnum" on, "lnum" on;
+  color: #ffffff;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div {
+  width: 286px;
+  background: #242f54;
+  border-radius: 10px;
+  padding: 27.83px 4px 31.59px 12px;
+  margin-top: 8px;
+}
+.Allcoin img {
+    max-width: 24px;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .usdc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .usdc .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 50px;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .usdc .name h2 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: #eef0f2;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .usdc .name h3 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  color: #92a0d0;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .usdc .numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex: 0 0 80px;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .usdc .numbers h2 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: #d5dadd;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .usdc .numbers .arr-num {
+  display: flex;
+  align-items: center;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .usdc .numbers .arr-num h3 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.018em;
+  text-transform: uppercase;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .usdc .numbers .arr-num .green-ar {
+  color: #5dd165;
+}
+.holder .info .left-side .two-stats .charts .chart-div .usdc .numbers .arr-num.red .green-ar{ color: #ff4068;}
+
+.holder .info .left-side .two-stats .charts .chart-div .usdc .numbers .arr-num .red-ar {
+  color: #ff4068;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .sol {
+  margin-top: 35.46px;
+  margin-bottom: 33px;
+}
+
+.holder .info .left-side .two-stats .charts .chart-div .zrx {
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
+
+.holder .info .left-side .watch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 23px;
+}
+
+.holder .info .left-side .watch h2 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-feature-settings: "tnum" on, "lnum" on;
+  color: #ffffff;
+}
+
+.holder .info .left-side .watch .watch-info {
+  width: 710px;
+  background: #242f54;
+  border-radius: 10px;
+  padding: 15px 31px 31px 30px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 9px;
+}
+
+.holder .info .left-side .watch .watch-info .range {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.holder .info .left-side .watch .watch-info .range .coin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 129px;
+  height: 34px;
+  background: #303e6c;
+  border-radius: 11px;
+  padding: 0 13px 0 13px;
+  border-left: 1px solid #3c4b7c;
+}
+
+.holder .info .left-side .watch .watch-info .range .coin p {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.014em;
+  color: #b0babf;
+}
+
+.holder .info .left-side .watch .watch-info .range .coin p span {
+  color: white;
+}
+
+.holder .info .left-side .watch .watch-info .range .days {
+  display: flex;
+}
+
+.holder .info .left-side .watch .watch-info .range .days .cube {
+  width: 38px;
+  height: 32px;
+  background: #1a2341;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.holder .info .left-side .watch .watch-info .range .days .cube p {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.006em;
+  text-transform: uppercase;
+  color: #92a0d0;
+}
+
+.holder .info .left-side .watch .watch-info .range .days .w1 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.holder .info .left-side .watch .watch-info .range .days .m6 {
+  margin-left: 8px;
+}
+
+.holder .info .left-side .watch .watch-info .range .days .active {
+  background: #344371;
+}
+
+.holder .info .left-side .watch .watch-info .range .days .active p {
+  color: #f6f8f9;
+}
+
+.holder .info .left-side .watch .watch-info .info-coins {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  flex-direction: column;
+  height: 146px;
+}
+
+.holder .info .left-side .watch .watch-info .info-coins h2 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.006em;
+  text-transform: uppercase;
+  color: #92a0d0;
+}
+
+.holder .info .left-side .watch .watch-info .info-coins h3 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.014em;
+  color: #ffffff;
+}
+
+.holder .info .left-side .watch .watch-info .info-coins h4 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.014em;
+  color: #cad3ed;
+  text-align: right;
+}
+
+.holder .info .left-side .watch .watch-info .info-coins .green {
+ 
+display: flex;
+ 
+align-items: center;
+ 
+justify-content: flex-end;
+}
+.holder .info .left-side .watch .watch-info .info-coins .green .green-icon{ fill: #5dd165;margin-right: 5px;}
+.holder .info .left-side .watch .watch-info .info-coins .green .red-icon{display:none}
+
+.holder .info .left-side .watch .watch-info .info-coins .red {
+
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+.holder .info .left-side .watch .watch-info .info-coins .red h4{color:#ff4068}
+ .holder .info .left-side .watch .watch-info .info-coins .green h4{color:#5dd165}
+
+.holder .info .left-side .watch .watch-info .info-coins .red .red-icon{fill: #ff4068;margin-right: 5px;}
+.holder .info .left-side .watch .watch-info .info-coins .red .green-icon{display:none}
+
+.holder .info .left-side .watch .watch-info .info-coins .coin {
+ 
+  display: flex;
+  justify-content: space-between;
+}
+
+.holder .info .right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.holder .info .right-side .assets {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.holder .info .right-side .assets h2 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-feature-settings: "tnum" on, "lnum" on;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+
+.holder .info .right-side .assets h2 a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid;
+        text-transform: capitalize;
+}
+
+.holder .info .right-side .assets .two-table {
+  display: flex;
+}
+
+.holder .info .right-side .assets .two-table .coins {
+  display: flex;
+  flex-direction: column;
+}
+
+.holder .info .right-side .assets .two-table .coins .single-coin {
+  width: 381px;
+  background: #242f54;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px 15px 18px;
+}
+
+.holder .info .right-side .assets .heading {
+    display: flex;
+    justify-content: space-between;
+    width: 381px;
+}
+
+.holder .info .right-side .assets .two-table .coins .single-coin .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.holder .info .right-side .assets .two-table .coins .single-coin .name h2 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: #eef0f2;
+}
+
+.holder .info .right-side .assets .two-table .coins .single-coin .name h3 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  color: #92a0d0;
+}
+
+.holder .info .right-side .assets .two-table .coins .single-coin .price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.holder .info .right-side .assets .two-table .coins .single-coin .price h2 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: #eef0f2;
+}
+
+.holder .info .right-side .assets .two-table .coins .single-coin .price .ar {
+  display: flex;
+  align-items: center;
+}
+
+.holder .info .right-side .assets .two-table .coins .single-coin .price .ar p {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.018em;
+  text-transform: uppercase;
+}
+
+.holder .info .right-side .assets .two-table .coins .single-coin .price .ar.green {
+  color: #5dd165;
+}
+.holder .info .right-side .assets .two-table .coins .single-coin .price .ar.green path{fill:#5dd165}
+.numbers .arr-num .green-icon path{fill:#5dd165}
+.numbers .arr-num .red-icon path{fill:#ff4068}
+.numbers .arr-num.green .red-icon{display:none}
+.numbers .arr-num.red .green-icon{display:none}
+.holder .info .right-side .assets .two-table .coins .single-coin .price .ar.red {
+  color: #ff4068;
+}
+.holder .info .right-side .assets .two-table .coins .single-coin .price .ar.red path{fill:#ff4068}
+
+.holder .info .right-side .assets .two-table .coins .single-coin .price .ar.red .green-icon{display:none}
+.holder .info .right-side .assets .two-table .coins .single-coin .price .ar.green .red-icon{display:none}
+
+.holder .info .right-side .assets .two-table .coins .eth {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.holder .info .right-side .assets .two-table .price-days .ar-h3.green svg.red-icon{display:none}
+.holder .info .right-side .assets .two-table .price-days .ar-h3.red svg.green-icon{display:none}
+.holder .info .right-side .assets .two-table .price-days .ar-h3.green svg.green-icon path {
+    fill: #5dd165;
+}
+.holder .info .right-side .assets .two-table .price-days .ar-h3.red svg.red-icon path {
+    fill: #ff4068;
+}
+.holder .info .right-side .assets .two-table .price-days {
+  width: 218px;
+  height: 242px;
+  background: #242f54;
+  border-radius: 10px;
+  padding: 22px 14.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 11px;
+}
+
+.holder .info .right-side .assets .two-table .price-days h2 {
+  font-family: "Inter-Medium";
+  font-style: normal;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.019em;
+  color: #d5dadd;
+}
+
+.holder .info .right-side .assets .two-table .price-days .ar-h3 {
+  display: flex;
+  align-items: center;
+}
+
+.holder .info .right-side .assets .two-table .price-days .ar-h3 h3 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.006em;
+  color: #5dd165;
+}
+
+.holder .info .right-side .assets .two-table .price-days .ar-h3.red + div svg.green-chart{display:none}
+.holder .info .right-side .assets .two-table .price-days .ar-h3.green + div svg.red-chart{display:none}
+
+
+.holder .info .right-side .assets .two-table .price-days .ar-h3.red h3
+{
+  color:#ff4068}
+.holder .info .right-side .assets .two-table .price-days .days {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.holder .info .right-side .assets .two-table .price-days .days .cube {
+  width: 33px;
+  height: 32px;
+  background: #1a2341;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.holder .info .right-side .assets .two-table .price-days .days .cube p {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.006em;
+  text-transform: uppercase;
+  color: #92a0d0;
+}
+
+.holder .info .right-side .assets .two-table .price-days .days .active {
+  background: #344371;
+}
+
+.holder .info .right-side .assets .two-table .price-days .days .active p {
+  color: #f6f8f9;
+}
+
+.holder .info .right-side .launches {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.holder .info .right-side .launches h2 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-feature-settings: "tnum" on, "lnum" on;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
+.holder .info .right-side .launches .launches-info {
+  width: 607px;
+  background: #242f54;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 16px 16px 27.97px;
+}
+
+.holder .info .right-side .launches .launches-info .coin {
+  display: flex;
+  flex-direction: column;
+  height: 132px;
+  justify-content: space-between;
+}
+
+.holder .info .right-side .launches .launches-info .coin h2 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #92a0d0;
+  margin: 0;
+}
+
+.holder .info .right-side .launches .launches-info .coin h3 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.014em;
+  color: #eef0f2;
+  margin: 0;
+}
+
+.holder .info .right-side .launches .launches-info .coin .tar {
+  text-align: right;
+  color: #cad3ed;
+}
+
+.holder .info .right-side .launches .launches-info .coin h4 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.014em;
+  color: #cad3ed;
+  text-align: center;
+  margin: 0;
+}
+
+.holder .info .right-side .new-launch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.holder .info .right-side .new-launch h2 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-feature-settings: "tnum" on, "lnum" on;
+  color: #ffffff;
+  margin-top: 23px;
+  margin-bottom: 10px;
+}
+
+.holder .info .right-side .new-launch .new-info {
+  width: 607px;
+  background: #242f54;
+  border-radius: 10px;
+  padding: 12px 28px 24px 27.97px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.holder .info .right-side .new-launch .new-info .coin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 204px;
+}
+
+.holder .info .right-side .new-launch .new-info .coin h2 {
+  font-family: "Inter-SemiBold";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #92a0d0;
+  margin: 0;
+}
+
+.holder .info .right-side .new-launch .new-info .coin h3 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.014em;
+  color: #eef0f2;
+  margin: 0;
+}
+
+.holder .info .right-side .new-launch .new-info .coin h4 {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.014em;
+  color: #cad3ed;
+  margin: 0;
+  text-align: right;
+}
+
+.holder .info .right-side .new-launch .new-info .coin p {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: -0.014em;
+  color: #5dd165;
+  margin: 0;
+}
+
+.holder .info .right-side .new-launch .new-info .coin .tar {
+  text-align: right;
+}
+
+.holder .info .right-side .new-launch .new-info .coin .col {
+  color: #cad3ed;
+}
+
+.click {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  #dn {
+    display: none;
+  }
+}
+
+
+#btcChart,
+#bnbChart,
+#ethChart,.coinchart {
+    grid-area: chart;
+    margin-top: auto;
+    max-width:75px;
+}
+.coinchart{width:43px;}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: #1f2a50;
+    border-radius: 7.14012px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5.81px 10.87px 6.69px 17.43px;
+    height: 38.33px;
+    font-weight:bold;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #adadad transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    height: 0;
+    left: 50%;
+    margin-left: -6px;
+    margin-top:3px;
+    position: absolute;
+    top: 50%;
+    width: 0
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-size: 19.0403px;
+  line-height: 28px;
+  color: #e5e9eb;
+  padding-left: 1px;
+  margin-left: 10px;
+}
+span.select2-search.select2-search--dropdown {
+    display: none;
+}
+.select2-container--default .select2-results>.select2-results__options{max-height:350px;}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #888 transparent;
+    border-width: 0 5px 7px 5px
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #344371;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected],.select2-results__option:hover {
+    background-color: #344371;
+    color: white;
+}
+.select2-container--default .select2-selection--single img{width:30px;margin-left: -12px;}
+.select2-dropdown{background-color: #242f54;
+    border: 1px solid #242f54;}
+.select2-results__option span{
+    display: flex;
+    font-family: "Inter-Regular";
+    font-weight:700;
+    vertical-align: middle;
+    align-content: flex-end;
+    color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+}
+.select2-results__option span img {
+    max-width: 30px;
+    margin-right: 10px;
+}
+.acmeticker-wrap{height:34px;background:#242f54 !important; border: #242f54 1px solid;width:100%;overflow:hidden;}
+.ticker {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+  text-align: left;
+ 
+  position: relative;
+  overflow: hidden;
+ background:transparent !important;
+  color: #fff;
+  height: 34px !important;
+  font-family: "Inter-SemiBold";
+  line-height: 20px;
+  border-radius: 9px;
+}
+
+.eocjs-newsticker {
+  line-height:34px;
+  background-color: #eee;
+}
+
+.eocjs-newsticker .eocjs-newsticker-container {
+  position: relative;
+   line-height:34px;
+  overflow: hidden;
+}
+.acmeticker-wrap li{vertical-align:middle;}
+#ticker-slide li{display:inline-block;vertical-align: text-bottom;}
+.acmeticker-wrap li span{hieght:34px;display:block;}
+#ticker-slide img{width:28px;display:inline-block;vertical-align:middle;margin-top: -6px;}
+.eocjs-newsticker .eocjs-newsticker-one,
+.eocjs-newsticker .eocjs-newsticker-two {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 20px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.ticker ul {
+  width: 100%;
+  position: relative;
+}
+
+.ticker ul li {
+  width: 100%;
+  display: none;
+}
+
+.holder .info .left-side .watch .watch-info .info-coins .coin  h4:nth-child(5) ,
+.holder .info .left-side .watch .watch-info .info-coins .coin  h2:nth-child(5) {
+    flex: 0 0 170px;
+    text-align: right;
+}
+.holder .info .left-side .watch .watch-info .info-coins .coin  h4:nth-child(4),
+.holder .info .left-side .watch .watch-info .info-coins .coin  h2:nth-child(4) {
+    flex: 0 0 150px;
+    text-align: right;
+}
+.holder .info .left-side .watch .watch-info .info-coins .coin div:nth-child(3),
+.holder .info .left-side .watch .watch-info .info-coins .coin  h2:nth-child(3) {
+    flex: 0 0 90px;
+    text-align: right;
+    /* align-items: flex-end; */
+}
+.holder .info .left-side .watch .watch-info .info-coins .coin h4:nth-child(2),
+.holder .info .left-side .watch .watch-info .info-coins .coin  h2:nth-child(2) {
+    flex: 0 0 100px;
+    text-align: right;
+}
+.holder .info .left-side .watch .watch-info .info-coins .coin h3:nth-child(1),
+.holder .info .left-side .watch .watch-info .info-coins .coin  h2:nth-child(1) {
+    flex: 0 0 70px;
+}
+
+/*# sourceMappingURL=demo.css.map */

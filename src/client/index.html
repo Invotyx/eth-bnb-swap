@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <title>VentiSwap Demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="ventiswap/css/style.css" />
+
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"
+    integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+
+<body>
+  <div class="buy-sell">
+    <br>
+    <div class="header" id="dn">
+
+      <div class="right">
+        <a href="#" class="connect">Connect Wallet</a><br><br>
+
+      </div>
+      <br>
+    </div>
+
+    <div>
+      <label class="toAddressLabel">To Address</label>
+      <input class="toAddress" value="" id="toAddressInput" placeholder="To Address" />
+    </div>
+    <br>
+    <label>From Coin</label>
+    <br>
+    <div class="eth-stats from-swap" data-swap="from" aria-data-swap="to">
+      <select class="coinselect" id="fromCoin"></select>
+
+      <input class="fromprice inputnumber" type="number" id="fromConv" value="1" />
+
+    </div>
+    <label>To Coin</label>
+
+    <div class="eth-stats bnb-stats to-swap" data-swap="to" aria-data-swap="from">
+      <select class="coinselect" id="toCoin"></select>
+
+
+      <input class="toprice inputnumber" type="number" id="toConv" value="1" />
+
+    </div>
+
+
+    <a href="#" class="swap">Swap</a>
+
+
+  </div>
+
+  <script src="ventiswap/js/script.js"></script>
+  <script src="ventiswap/js/app.js"></script>
+
+
+</body>
+
+</html>
