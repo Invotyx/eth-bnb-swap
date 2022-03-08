@@ -12,7 +12,7 @@ import { EthereumService } from './ethereum/ethereum.service';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'src/client'),
+      rootPath: join(__dirname, '..', 'public/client'),
     }),
     HttpModule,
   ],
