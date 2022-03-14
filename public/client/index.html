@@ -1,11 +1,11 @@
 <html>
 
 <head>
-  <title>VentiSwap Demo</title>
+  <title>CrytoSwap Demo</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
     referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="ventiswap/css/style.css" />
+  <link rel="stylesheet" href="cryptoswap/css/style.css" />
 
   <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"
     integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
@@ -17,48 +17,46 @@
 </head>
 
 <body>
-  <div class="buy-sell">
-    <br>
-    <div class="header" id="dn">
 
-      <div class="right">
-        <a href="#" class="connect">Connect Wallet</a><br><br>
+  <div class="header" id="dn">
+
+    <div id="connectButtonDiv" class="innerConnectDiv">
+      <a href="#" class="connect">Connect Wallet</a><br><br>
+
+    </div>
+    <br>
+
+
+    <div id="main-Body" hidden="true">
+
+      <div class="from-coin-div">
+        <label class="to-address-label">To Address</label>
+        <input class="toAddress" value="" id="toAddressInput" placeholder="To Address" />
+      </div>
+      <br>
+
+      <br>
+      <div class="from-coin-div">
+        <label class="from-coin-label">From ETH</label>
+        <img class="from-image" src="./cryptoswap/images/eth.png">
+        <input class="price fromprice  inputnumber  " type="number" id="fromCoin" value="1" />
+
+
+        <label class="from-coin-label">To BNB</label>
+        <img class="from-image" src="./cryptoswap/images/bnb.png">
+        <input class="price toprice inputnumber to-swap" id="toCoin" disabled="true" value="" />
+
 
       </div>
       <br>
+
+
+      <a href="#" class="swap">Swap</a>
     </div>
-
-    <div>
-      <label class="toAddressLabel">To Address</label>
-      <input class="toAddress" value="" id="toAddressInput" placeholder="To Address" />
-    </div>
-    <br>
-    <label>From Coin</label>
-    <br>
-    <div class="eth-stats from-swap" data-swap="from" aria-data-swap="to">
-      <select class="coinselect" id="fromCoin"></select>
-
-      <input class="fromprice inputnumber" type="number" id="fromConv" value="1" />
-
-    </div>
-    <label>To Coin</label>
-
-    <div class="eth-stats bnb-stats to-swap" data-swap="to" aria-data-swap="from">
-      <select class="coinselect" id="toCoin"></select>
-
-
-      <input class="toprice inputnumber" type="number" id="toConv" value="1" />
-
-    </div>
-
-
-    <a href="#" class="swap">Swap</a>
-
-
   </div>
 
-  <script src="ventiswap/js/script.js"></script>
-  <script src="ventiswap/js/app.js"></script>
+  <script src="cryptoswap/js/script.js"></script>
+  <script src="cryptoswap/js/app.js"></script>
 
 
 </body>
