@@ -1,73 +1,48 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+#  ETH-TO-BNB-SWAP
+This is a one page website that can be used to swap from Ethereum Coins to Binance Coins and it's utilizing basic crypto swapping requirements to achieve that purpose.
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## TechStack
+This website has been developed using NodeJs that is a JavaScript runtime environment. This website can be used to swap from Ethereum to Binance coins.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+### Backend
+* Node Js
+* PgSQL
 
-## Description
+### Frontend
+* Html
+* CSS
+* Javascript
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Connect Wallet
+The connect wallet is used to connect this website with the meta mask account. 
+The connect wallet button shows up on opening the website for the time or whenever your reload the page and your metamask account is not connected with the website.
+<img src="/assets/Connect-wallet.png" >
 
-## Installation
+## Main Page
+The main page show up after this website is connected to metamask wallet.
+You can enter the binance testnet address and the amount the Ethereum coins you want to swap with binance coins and then click swap.
+<img src="/assets/main-page.png" >
 
-```bash
-$ npm install
-```
 
-## Running the app
+## Confirm Swap
+After clicking swap button a confirm tab from metamask shows up and ask for confirmation of transferring the coins to the given address.
+You must have to click confirm button on the tab to complete the swapping. after clicking the confirm button you will receive a confirmation notification through metamask.
+<img src="/assets/confirm-swap.png" >
 
-```bash
-# development
-$ npm run start
+## Signature Request
+After confirming the the swap on confirmation tab, you will see a sign request tab that ask to sign the swap.
+<img src="/assets/signature-Request.png" >
 
-# watch mode
-$ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
+## Bsc TestNet Transaction
+Now you can test the transaction on bsc testNet using the transaction id that you can find on your MetaMask Account
+<img src="/assets/Bsc-TestNet-Transaction.png" >
 
-## Test
 
-```bash
-# unit tests
-$ npm run test
+## Contact Us
+**Email** *[info@invotyx.com](mailto:info@invotyx.com)*  
+**Call Us**  *[+44 07958 137157](tel:+4407958137157)*  
+**Visit Us**  *[Suite 3 52 Upton Lane, London, United Kingdom, E7 9LN](https://goo.gl/maps/qLEBRBk7EEK5ALVw9)*  
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+<p align="center"><a href="https://invotyx.co.uk/contactus.html" target="_blank"><img src="https://www.google.com/u/2/ac/images/logo.gif?uid=111879656337350806724&service=google_gsuite" width="400"></a></p>
