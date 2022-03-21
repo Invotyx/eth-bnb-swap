@@ -38,6 +38,41 @@ After confirming the the swap on confirmation tab, you will see a sign request t
 Now you can test the transaction on bsc testNet using the transaction id that you can find on your MetaMask Account
 <img src="/assets/Bsc-TestNet-Transaction.png" >
 
+## Installation
+
+```bash
+$ npm install
+```
+
+## Running the app
+
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+#browser
+$ http://localhost:3000/index.html
+
+# production mode
+$ npm run start:prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+```
+
 
 ## Contact Us
 **Email** *[info@invotyx.com](mailto:info@invotyx.com)*  
