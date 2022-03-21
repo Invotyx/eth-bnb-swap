@@ -47,7 +47,6 @@ export class BinanceService {
       gasPrice,
     };
 
-    console.log('TRANSACTION', tx);
     return walletSigner.sendTransaction(tx);
   }
 }

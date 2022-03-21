@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.from-coin-label{
+ width: 80px;
+ padding-left: 5px;
+ color:white;
+}
+
+.to-address-label{
+ width: 110px;
+ color:white;
+
+}
+.toAddress{
+width: 350px;
+height: 25px;
+}
+
+.to-address-div{
+   
+    width: 150px;
+    height: 80px;
+}
+
+.from-coin-div{
+    align-items: center;
+    display: flex;
+    height: 40px;
+}
+.swap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+ background:rgba(18, 91, 195, 0.6);
+  border-radius: 7.03481px;
+  font-family: 'Inter-SemiBold';
+  font-style: normal;
+  font-size: 20.0765px;
+  line-height: 29px;
+  letter-spacing: -0.014em;
+  color:white;
+  height: 48.61px;
+  margin-top: 11px;
+  order: 7;
+}
+
+
+.header{
+    height: 100%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+
+}
+
+.innerConnectDiv{
+ align-self:center;
+}
+
+.connect{
+    display:flex;
+  justify-content: center;
+  align-items: center; 
+  text-decoration: none;
+ background:rgba(18, 91, 195, 0.6);
+  border-radius: 7.03481px;
+  font-family: 'Inter-SemiBold';
+  font-style: normal;
+  font-size: 20.0765px;
+  line-height: 50px;
+  letter-spacing: -0.014em;
+  color:white;
+  width:250px;
+  height: 80.61px;
+  order: 7;
+}
+
+.price{
+width:120px;
+height: 25px;
+}
+
+body {
+  background:grey;
+}
+.from-image{
+  
+  height:30px;
+  width:30px;
+  padding-right: 5px;
+  
+}
+@font-face {
+  font-family: 'Inter-Light';
+  src: url('../fonts/Inter/Inter-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url('../fonts/Inter/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter-Medium';
+  src: url('../fonts/Inter/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: url('../fonts/Inter/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url('../fonts/Inter/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}

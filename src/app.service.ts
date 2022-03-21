@@ -14,7 +14,6 @@ export class AppService {
   ) {}
 
   async createTransaction(createTransaction: CreateTransaction) {
-    console.log('REQUEST BODY', createTransaction);
     const {
       fromCoin,
       toCoin,
@@ -43,15 +42,11 @@ export class AppService {
         );
     }
 
-    console.log('isVerified', isVerified);
-
     if (!isVerified) {
       throw new BadRequestException('Signature is not valid');
     }
 
     const toAmount = await this.getToAmount(fromCoin, toCoin, amount);
-
-    console.log('TO AMOUNT', toAmount);
 
     switch (toCoin) {
       case Coin.BNB:
